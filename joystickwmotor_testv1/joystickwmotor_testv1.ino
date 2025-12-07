@@ -40,19 +40,20 @@ void loop() {
   analogWrite(6, 255); //motor 2 motorvalue - 0-255
 
   if(yValue > 900 && yValue <= 1023 && xValue > 450 && xValue < 550) {
-      Moveright();
-  } else 
-      if (yValue >= 0 && yValue < 100 && xValue > 450 && xValue < 550) {
-        Moveleft();
-      } else
-           if (xValue >= 0 && xValue < 100 && yValue > 450 && yValue < 550) {
-            Movebackward(); 
-           } else
-              if(xValue > 900 && xValue <= 1023 && yValue > 450 && yValue < 550) {
-                Moveforward();
-              } else {
-                Stopmotors();
-              }
+    Moveright();
+  } 
+  else if (yValue >= 0 && yValue < 100 && xValue > 450 && xValue < 550) {
+    Moveleft();
+  }
+  else if (xValue >= 0 && xValue < 100 && yValue > 450 && yValue < 550) {
+    Movebackward(); 
+  }
+  else if(xValue > 900 && xValue <= 1023 && yValue > 450 && yValue < 550) {
+    Moveforward();
+  }
+  else {
+    Stopmotors();
+  }
 
 
 }
